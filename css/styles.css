@@ -158,6 +158,49 @@ input {
   background-color: #404bbf;
 }
 
+/* ------------- GITHUB BUTTON -------------*/
+
+.link-to-git-hub {
+  position: fixed;
+  z-index: 1000;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 50%;
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pulse 2s infinite;
+}
+
+.link-to-git-hub:hover {
+  box-shadow: 0 0 15px rgba(20, 100, 221, 0.7);
+}
+
+.link-to-git-hub .git-hub-icon {
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
 /* ------------- HEADER -------------*/
 
 .site-header {
@@ -314,7 +357,7 @@ input {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1000;
+  z-index: 1001;
 
   transform: translateX(100%);
 
@@ -491,7 +534,7 @@ input {
 
 @media (min-width: 768px) {
   .hero-section {
-    max-width: 768px;
+    max-width: 100%;
 
     margin-top: 71px; /* for fixed top menu bar */
 
@@ -528,8 +571,6 @@ input {
 
 @media (min-width: 1158px) {
   .hero-section {
-    max-width: 1440px;
-
     padding-top: 188px;
     padding-bottom: 188px;
 
